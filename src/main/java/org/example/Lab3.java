@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Lab3 {
 
-    public static void main(String[] args) {
+    static void main() {
         Scanner in = new Scanner(System.in);
 
         System.out.print("Название события: ");
@@ -15,8 +15,15 @@ public class Lab3 {
         System.out.print("Дата события (дд.мм.гггг): ");
         String dateText = in.nextLine();
 
-        DateTimeFormatter inputFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-        LocalDate date = LocalDate.parse(dateText, inputFormat);
+        DateTimeFormatter inputFormat;
+        LocalDate date;
+        try {
+            inputFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+            date = LocalDate.parse(dateText, inputFormat);
+        } catch (Exception e) {
+            System.out.println("ERROR" + e.getClass().getSimpleName());
+            return;
+        }
 
         System.out.print("Количество участников (можно пропустить): ");
         String participants = in.nextLine();
@@ -27,7 +34,7 @@ public class Lab3 {
         System.out.print("Комментарий (можно пропустить): ");
         String comment = in.nextLine();
 
-        String report = "🎮 Отчёт о событии\n"
+        String report = "Отчёт о событии\n"
                 + "Название: " + title + "\n"
                 + "Дата проведения: " + date.format(inputFormat) + "\n";
 

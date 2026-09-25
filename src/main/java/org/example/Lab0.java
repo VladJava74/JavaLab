@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Lab0 {
-    static void main(String[] args) {
+    static void main() {
         Scanner in = new Scanner(System.in);
         System.out.println("\n===== Создание персонажа =====");
         System.out.print("Введите имя: ");

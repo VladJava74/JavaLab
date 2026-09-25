@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class Lab1 {
-    static void main(String[] args) {
+    static void main() {
         try (InputStream inputStream =
                      Lab1.class.getResourceAsStream("/lab_1.txt")) {
 

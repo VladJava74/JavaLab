@@ -1,6 +1,6 @@
 package org.example;
 
-public class Main {
+public class Lab4 {
     static void main() {
 
     }
