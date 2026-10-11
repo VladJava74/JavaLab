@@ -17,6 +17,7 @@ public class Lab3 {
 
         DateTimeFormatter inputFormat;
         LocalDate date;
+
         try {
             inputFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy");
             date = LocalDate.parse(dateText, inputFormat);
